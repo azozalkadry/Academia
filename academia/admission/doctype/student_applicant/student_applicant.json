@@ -9,39 +9,46 @@
  "engine": "InnoDB",
  "field_order": [
   "section_break_uirg",
+  "naming_series",
   "first_name",
   "middle_name",
   "last_name",
   "column_break_ghlu",
-  "naming_series",
   "joining_date",
-  "user_id",
+  "program_degree",
   "academic_program",
+  "section_break_eqhj",
+  "faculty_department",
+  "column_break_iyck",
+  "faculty",
   "personal_details_section",
+  "remedial_material",
+  "column_break_twpm",
+  "personal_details_tab",
   "student_email_address",
   "date_of_birth",
-  "blood_group",
-  "column_break_twpm",
-  "student_mobile_number",
-  "gender",
-  "nationality",
-  "personal_details_tab",
-  "date_of_birth2",
   "gender2",
-  "blood_group2",
   "column_break_jvwx",
   "student_mobile_number2",
   "nationality2",
   "relations_tab",
   "guardian_details_section",
-  "guardians",
+  "guardian",
   "address_tab",
   "address_line_1",
   "address_line_2",
   "column_break_hzit",
   "city",
   "state",
-  "country"
+  "country",
+  "tab_5_tab",
+  "information_academia_section",
+  "qualification",
+  "document",
+  "status_tab",
+  "status",
+  "remedial_materials_tab",
+  "remedial_materials"
  ],
  "fields": [
   {
@@ -51,6 +58,7 @@
   {
    "fieldname": "first_name",
    "fieldtype": "Data",
+   "in_global_search": 1,
    "in_list_view": 1,
    "label": "First Name",
    "reqd": 1
@@ -58,12 +66,16 @@
   {
    "fieldname": "middle_name",
    "fieldtype": "Data",
-   "label": "Middle Name"
+   "label": "Middle Name",
+   "reqd": 1
   },
   {
    "fieldname": "last_name",
    "fieldtype": "Data",
-   "label": "Last Name"
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Last Name",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_ghlu",
@@ -72,23 +84,26 @@
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
+   "hidden": 1,
    "label": "Naming Series",
    "options": "ADM-SAP-.YYYY.-"
   },
   {
+   "default": "Today",
    "fieldname": "joining_date",
    "fieldtype": "Date",
-   "label": "Application Date"
+   "label": "Applicant Date",
+   "options": "Today",
+   "read_only": 1
   },
   {
-   "fieldname": "user_id",
-   "fieldtype": "Select",
-   "label": "Application Status",
-   "options": "Applied\nApproved\nRejected\nAdmitted"
-  },
-  {
+   "depends_on": "eval:doc.program_degree!=null;",
    "fieldname": "academic_program",
    "fieldtype": "Link",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Academic Program",
    "options": "Program Specification",
    "reqd": 1
@@ -101,50 +116,18 @@
   {
    "fieldname": "student_email_address",
    "fieldtype": "Data",
-   "label": "Student Email Address"
-  },
-  {
-   "fieldname": "date_of_birth",
-   "fieldtype": "Link",
-   "label": "Student Admission",
-   "options": "Student Admission"
-  },
-  {
-   "fieldname": "blood_group",
-   "fieldtype": "Link",
-   "label": "Student Category",
-   "options": "Student Category"
+   "label": "Student Email Address",
+   "options": "Email",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_twpm",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "student_mobile_number",
-   "fieldtype": "Date",
-   "label": "Academic Year",
-   "reqd": 1
-  },
-  {
-   "fieldname": "gender",
-   "fieldtype": "Data",
-   "label": "Academic Term"
-  },
-  {
-   "default": "0",
-   "fieldname": "nationality",
-   "fieldtype": "Check",
-   "label": "Paid"
-  },
-  {
    "fieldname": "personal_details_tab",
    "fieldtype": "Tab Break",
    "label": "Personal Details"
-  },
-  {
-   "fieldname": "date_of_birth2",
-   "fieldtype": "Date",
-   "label": "Date of Birth"
   },
   {
    "fieldname": "gender2",
@@ -153,19 +136,14 @@
    "options": "Gender"
   },
   {
-   "fieldname": "blood_group2",
-   "fieldtype": "Select",
-   "label": "Blood Group",
-   "options": "\nA+\nA-\nB+\nB-\nO+\nO-\nAB+\nAB-"
-  },
-  {
    "fieldname": "column_break_jvwx",
    "fieldtype": "Column Break"
   },
   {
    "fieldname": "student_mobile_number2",
    "fieldtype": "Data",
-   "label": "Student Mobile Number"
+   "label": "Student Mobile Number",
+   "options": "phone"
   },
   {
    "fieldname": "nationality2",
@@ -176,16 +154,6 @@
    "fieldname": "relations_tab",
    "fieldtype": "Tab Break",
    "label": "Relations"
-  },
-  {
-   "fieldname": "guardian_details_section",
-   "fieldtype": "Section Break",
-   "label": "Guardian Details"
-  },
-  {
-   "fieldname": "guardians",
-   "fieldtype": "Text",
-   "label": "Guardians"
   },
   {
    "fieldname": "address_tab",
@@ -221,11 +189,124 @@
    "fieldtype": "Link",
    "label": "Country",
    "options": "Country"
+  },
+  {
+   "fieldname": "tab_5_tab",
+   "fieldtype": "Tab Break",
+   "label": "Information Academia "
+  },
+  {
+   "fieldname": "information_academia_section",
+   "fieldtype": "Section Break",
+   "label": "Information Academia "
+  },
+  {
+   "fetch_from": "psa.requirement",
+   "fetch_if_empty": 1,
+   "fieldname": "qualification",
+   "fieldtype": "Table",
+   "label": "Qualification",
+   "options": "Qualification"
+  },
+  {
+   "fetch_from": "psa.requirement",
+   "fetch_if_empty": 1,
+   "fieldname": "document",
+   "fieldtype": "Table",
+   "label": "Document ",
+   "options": "Document"
+  },
+  {
+   "fieldname": "program_degree",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Program Degree",
+   "options": "Program Degree",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status_tab",
+   "fieldtype": "Tab Break",
+   "label": "Status"
+  },
+  {
+   "fieldname": "section_break_eqhj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "academic_program.faculty_department",
+   "fieldname": "faculty_department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Faculty Department",
+   "options": "Faculty Department",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_iyck",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "academic_program.faculty",
+   "fieldname": "faculty",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Faculty",
+   "options": "Faculty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remedial_materials",
+   "fieldtype": "Table",
+   "label": "Remedial Materials",
+   "options": "Student Applicant Course Child"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Status",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.status == \"Accepted\";",
+   "fieldname": "remedial_material",
+   "fieldtype": "Check",
+   "label": "Remedial Material"
+  },
+  {
+   "depends_on": "eval:doc.remedial_material == 1;",
+   "fieldname": "remedial_materials_tab",
+   "fieldtype": "Tab Break",
+   "label": "Remedial Materials"
+  },
+  {
+   "fieldname": "guardian_details_section",
+   "fieldtype": "Section Break",
+   "label": "Guardian Details"
+  },
+  {
+   "fieldname": "guardian",
+   "fieldtype": "Table",
+   "label": "Guardian",
+   "options": "Student Guardian"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-23 20:27:59.251224",
+ "modified": "2024-08-02 02:38:25.164493",
  "modified_by": "Administrator",
  "module": "Admission",
  "name": "Student Applicant",
