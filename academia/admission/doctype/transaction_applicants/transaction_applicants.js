@@ -12,7 +12,7 @@ frappe.ui.form.on("Transaction Applicants", {
         var academic_program = frm.doc.academic_program;
         if (academic_program) {
             frappe.call({
-                method: 'academia.admission.doctype.applicant_meeting.applicant_meeting.get_students',
+                method: 'academia.admission.doctype.transaction_applicants.transaction_applicants.get_students',
                 args: {
                     condition_value: academic_program 
                 },
@@ -26,7 +26,7 @@ frappe.ui.form.on("Transaction Applicants", {
                             child.faculty_department = row.faculty_department; 
                             child.student_email_address = row.student_email_address; 
                             child.faculty = row.faculty;
-                            child.student_details = `<button class="btn btn-primary btn-xs" onclick="handleStudentButtonClick('${row.name}')">View Details</button>`;
+                            child.student_no = row.name;
                         
                             
                             

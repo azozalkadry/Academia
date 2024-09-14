@@ -16,7 +16,6 @@ class ApplicantMeeting(Document):
 		from frappe.types import DF
 		from psa.psa_registration.doctype.request_a_supervisor_child.request_a_supervisor_child import RequestASupervisorchild
 
-		academic_program: DF.Link
 		department_council_minutes_date: DF.Date | None
 		department_council_minutes_number: DF.Data | None
 		discussion_date: DF.Date | None
@@ -24,6 +23,7 @@ class ApplicantMeeting(Document):
 		discussion_time: DF.Time | None
 		students: DF.Table[StudentApplicantChild]
 		table_ayrk: DF.Table[RequestASupervisorchild]
+		transaction_applicants: DF.Link
 	# end: auto-generated types
 
 @frappe.whitelist()
@@ -31,7 +31,7 @@ def get_students(condition_value):
     try:
         # Construct your SQL query
         sql_query = """
-            select * from `tabStudent Applicant` where status='Verification' and academic_program = %s
+            select * from `tabStudent Applicant Child` where parent = %s
         """
         # Execute the query
         data = frappe.db.sql(sql_query, (condition_value,), as_dict=True)

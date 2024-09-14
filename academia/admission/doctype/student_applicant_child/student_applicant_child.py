@@ -22,5 +22,6 @@ class StudentApplicantChild(Document):
 		program_degree: DF.Data | None
 		student_email_address: DF.Data | None
 		student_name: DF.Data | None
+		student_no: DF.Link | None
 	# end: auto-generated types
 	pass

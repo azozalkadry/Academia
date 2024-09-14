@@ -19,6 +19,6 @@ class StudentGuardian(Document):
 		parent: DF.Data
 		parentfield: DF.Data
 		parenttype: DF.Data
-		relation: DF.Literal["", "Mother", "Father", "Brother", "Friend", "Others"]
+		relation: DF.Link | None
 	# end: auto-generated types
 	pass

@@ -1,13 +1,16 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:name1",
  "creation": "2024-08-02 02:31:32.046825",
  "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "academic_program",
-  "students"
+  "name1",
+  "students",
+  "amended_from"
  ],
  "fields": [
   {
@@ -20,16 +23,34 @@
    "fieldname": "students",
    "fieldtype": "Table",
    "label": "Students",
-   "options": "Student Applicant Child",
-   "read_only": 1
+   "options": "Student Applicant Child"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Transaction Applicants",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name",
+   "options": "Program Specification",
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-08-02 02:31:46.231557",
+ "modified": "2024-08-02 23:30:22.886564",
  "modified_by": "Administrator",
  "module": "Admission",
  "name": "Transaction Applicants",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

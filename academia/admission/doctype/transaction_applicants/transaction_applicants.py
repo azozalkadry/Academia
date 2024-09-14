@@ -1,7 +1,7 @@
 # Copyright (c) 2024, SanU and contributors
 # For license information, please see license.txt
 
-# import frappe
+import frappe
 from frappe.model.document import Document
 
 
@@ -16,6 +16,23 @@ class TransactionApplicants(Document):
 		from frappe.types import DF
 
 		academic_program: DF.Link | None
+		amended_from: DF.Link | None
+		name1: DF.Data | None
 		students: DF.Table[StudentApplicantChild]
 	# end: auto-generated types
-	pass
+@frappe.whitelist()
+def get_students(condition_value):
+    try:
+        # Construct your SQL query
+        sql_query = """
+            select * from `tabStudent Applicant` where status='Verification' and academic_program = %s
+        """
+        # Execute the query
+        data = frappe.db.sql(sql_query, (condition_value,), as_dict=True)
+    
+        # Return the fetched data
+        return data
+        
+    except Exception as e:
+        frappe.log_error(f"Error in selecting data: {str(e)}")
+        return None
