@@ -15,29 +15,46 @@
    "fieldname": "qualification_type",
    "fieldtype": "Table MultiSelect",
    "label": "Qualification Type",
+<<<<<<< HEAD
    "options": "Requirement Applicant Qualification Type",
    "reqd": 1
+=======
+   "options": "Requirement Applicant Qualification Type"
+>>>>>>> origin/develop
   },
   {
    "fieldname": "document_type",
    "fieldtype": "Table MultiSelect",
    "label": "Document Type",
+<<<<<<< HEAD
    "options": "Requirement Applicant Document Type",
    "reqd": 1
+=======
+   "options": "Requirement Applicant Document Type"
+>>>>>>> origin/develop
   },
   {
    "fieldname": "program_degree",
    "fieldtype": "Link",
+<<<<<<< HEAD
    "in_list_view": 1,
    "label": "Program Degree",
    "options": "Program Degree",
    "reqd": 1,
+=======
+   "label": "Program Degree",
+   "options": "Program Degree",
+>>>>>>> origin/develop
    "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
+<<<<<<< HEAD
  "modified": "2024-08-02 01:17:50.877829",
+=======
+ "modified": "2024-07-29 11:03:27.933532",
+>>>>>>> origin/develop
  "modified_by": "Administrator",
  "module": "Admission",
  "name": "Requirement Applicant",

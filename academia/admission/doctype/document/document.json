@@ -17,7 +17,10 @@
   {
    "fieldname": "name_series",
    "fieldtype": "Select",
+<<<<<<< HEAD
    "hidden": 1,
+=======
+>>>>>>> origin/develop
    "label": "Name Series"
   },
   {
@@ -55,7 +58,11 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
+<<<<<<< HEAD
  "modified": "2024-08-02 16:56:24.361985",
+=======
+ "modified": "2024-07-16 04:14:41.351214",
+>>>>>>> origin/develop
  "modified_by": "Administrator",
  "module": "Admission",
  "name": "Document",

@@ -5,6 +5,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+<<<<<<< HEAD
   "transaction_applicants",
   "students",
   "committee_member_tab",
@@ -29,10 +30,31 @@
    "fieldname": "table_ayrk",
    "fieldtype": "Table",
    "options": "Request A Supervisor child"
+=======
+  "academic_program",
+  "students",
+  "committee_member_tab",
+  "table_epbm"
+ ],
+ "fields": [
+  {
+   "fieldname": "academic_program",
+   "fieldtype": "Link",
+   "label": "Academic Program",
+   "options": "Program Specification"
+  },
+  {
+   "fieldname": "students",
+   "fieldtype": "Table",
+   "label": "Students",
+   "options": "Student Applicant Child",
+   "read_only": 1
+>>>>>>> origin/develop
   },
   {
    "fieldname": "committee_member_tab",
    "fieldtype": "Tab Break",
+<<<<<<< HEAD
    "label": "Committee Member"
   },
   {
@@ -80,11 +102,23 @@
    "label": "Transaction Applicants",
    "options": "Transaction Applicants",
    "reqd": 1
+=======
+   "label": "Committee Member "
+  },
+  {
+   "fieldname": "table_epbm",
+   "fieldtype": "Table",
+   "options": "Request A Supervisor child"
+>>>>>>> origin/develop
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
+<<<<<<< HEAD
  "modified": "2024-08-02 17:20:47.584635",
+=======
+ "modified": "2024-07-30 03:11:45.578664",
+>>>>>>> origin/develop
  "modified_by": "Administrator",
  "module": "Admission",
  "name": "Applicant Meeting",

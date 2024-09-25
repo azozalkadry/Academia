@@ -13,14 +13,23 @@
    "fieldname": "qualification_type",
    "fieldtype": "Link",
    "in_list_view": 1,
+<<<<<<< HEAD
    "label": "Qualification Type",
    "options": "Qualification Type"
+=======
+   "label": "Program Degree",
+   "options": "Program Degree"
+>>>>>>> origin/develop
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
+<<<<<<< HEAD
  "modified": "2024-08-02 01:50:02.912136",
+=======
+ "modified": "2024-07-16 03:28:22.067779",
+>>>>>>> origin/develop
  "modified_by": "Administrator",
  "module": "Admission",
  "name": "Requirement Applicant Qualification Type",

@@ -17,7 +17,11 @@ class RequirementApplicant(Document):
 		from frappe.types import DF
 
 		document_type: DF.TableMultiSelect[RequirementApplicantDocumentType]
+<<<<<<< HEAD
 		program_degree: DF.Link
+=======
+		program_degree: DF.Link | None
+>>>>>>> origin/develop
 		qualification_type: DF.TableMultiSelect[RequirementApplicantQualificationType]
 	# end: auto-generated types
 	pass

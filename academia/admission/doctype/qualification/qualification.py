@@ -14,7 +14,11 @@ class Qualification(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
+<<<<<<< HEAD
 		college: DF.Data
+=======
+		college: DF.Data | None
+>>>>>>> origin/develop
 		country: DF.Data | None
 		department: DF.Data | None
 		estimation: DF.Data | None
@@ -25,7 +29,11 @@ class Qualification(Document):
 		parentfield: DF.Data
 		parenttype: DF.Data
 		percentage: DF.Data | None
+<<<<<<< HEAD
 		qualification: DF.Data
+=======
+		qualification: DF.Data | None
+>>>>>>> origin/develop
 		role: DF.Data | None
 		specialty: DF.Data | None
 		university: DF.Data | None

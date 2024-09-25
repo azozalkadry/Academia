@@ -7,7 +7,10 @@
  "engine": "InnoDB",
  "field_order": [
   "column_break_blof",
+<<<<<<< HEAD
   "student_no",
+=======
+>>>>>>> origin/develop
   "student_name",
   "program_degree",
   "faculty_department",
@@ -53,6 +56,7 @@
    "in_list_view": 1,
    "label": "Faculty",
    "read_only": 1
+<<<<<<< HEAD
   },
   {
    "fieldname": "student_no",
@@ -61,12 +65,18 @@
    "label": "Student No",
    "options": "Student Applicant",
    "read_only": 1
+=======
+>>>>>>> origin/develop
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
+<<<<<<< HEAD
  "modified": "2024-08-02 17:01:01.190585",
+=======
+ "modified": "2024-07-29 12:22:57.611970",
+>>>>>>> origin/develop
  "modified_by": "Administrator",
  "module": "Admission",
  "name": "Student Applicant Child",

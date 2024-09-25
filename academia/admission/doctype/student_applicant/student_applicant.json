@@ -13,9 +13,14 @@
   "first_name",
   "middle_name",
   "last_name",
+  "program_degree",
   "column_break_ghlu",
   "joining_date",
+<<<<<<< HEAD
   "program_degree",
+=======
+  "application_status",
+>>>>>>> origin/develop
   "academic_program",
   "section_break_eqhj",
   "faculty_department",
@@ -27,6 +32,17 @@
   "personal_details_tab",
   "student_email_address",
   "date_of_birth",
+<<<<<<< HEAD
+=======
+  "blood_group",
+  "column_break_twpm",
+  "student_mobile_number",
+  "gender",
+  "nationality",
+  "remedial_material",
+  "personal_details_tab",
+  "date_of_birth2",
+>>>>>>> origin/develop
   "gender2",
   "column_break_jvwx",
   "student_mobile_number2",
@@ -80,15 +96,29 @@
    "fieldname": "last_name",
    "fieldtype": "Data",
    "in_global_search": 1,
+<<<<<<< HEAD
    "in_list_view": 1,
    "label": "Last Name",
    "reqd": 1
+=======
+   "label": "Last Name"
+>>>>>>> origin/develop
   },
   {
    "fieldname": "column_break_ghlu",
    "fieldtype": "Column Break"
   },
   {
+<<<<<<< HEAD
+=======
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "ADM-SAP-.YYYY.-"
+  },
+  {
+>>>>>>> origin/develop
    "default": "Today",
    "fieldname": "joining_date",
    "fieldtype": "Date",
@@ -97,6 +127,7 @@
    "read_only": 1
   },
   {
+<<<<<<< HEAD
    "fieldname": "program_degree",
    "fieldtype": "Link",
    "in_filter": 1,
@@ -109,6 +140,8 @@
   },
   {
    "depends_on": "eval:doc.program_degree!=null;",
+=======
+>>>>>>> origin/develop
    "fieldname": "academic_program",
    "fieldtype": "Link",
    "in_filter": 1,
@@ -152,11 +185,30 @@
    "label": "Personal Details"
   },
   {
+<<<<<<< HEAD
    "default": "0",
    "depends_on": "eval:doc.status == \"Accepted\";",
    "fieldname": "remedial_material",
    "fieldtype": "Check",
    "label": "Remedial Material"
+=======
+   "fieldname": "student_email_address",
+   "fieldtype": "Data",
+   "label": "Student Email Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Link",
+   "label": "Student Admission",
+   "options": "Student Admission"
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Link",
+   "label": "Student Category",
+   "options": "Student Category"
+>>>>>>> origin/develop
   },
   {
    "fieldname": "column_break_twpm",
@@ -278,12 +330,26 @@
    "options": "Document"
   },
   {
+<<<<<<< HEAD
+=======
+   "fieldname": "program_degree",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Program Degree",
+   "options": "Program Degree"
+  },
+  {
+>>>>>>> origin/develop
    "default": "Draft",
    "fieldname": "status_tab",
    "fieldtype": "Tab Break",
    "label": "Status"
   },
   {
+<<<<<<< HEAD
    "default": "Draft",
    "fieldname": "status",
    "fieldtype": "Data",
@@ -296,17 +362,78 @@
    "fieldname": "remedial_materials_tab",
    "fieldtype": "Tab Break",
    "label": "Remedial Materials"
+=======
+   "fieldname": "section_break_eqhj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "academic_program.faculty_department",
+   "fieldname": "faculty_department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Faculty Department",
+   "options": "Faculty Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_iyck",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "academic_program.faculty",
+   "fieldname": "faculty",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Faculty",
+   "options": "Faculty",
+   "read_only": 1
+>>>>>>> origin/develop
   },
   {
    "fieldname": "remedial_materials",
    "fieldtype": "Table",
    "label": "Remedial Materials",
    "options": "Student Applicant Course Child"
+<<<<<<< HEAD
+=======
+  },
+  {
+   "fieldname": "application_status",
+   "fieldtype": "Select",
+   "label": "Application Status",
+   "no_copy": 1,
+   "options": "Applied\nApproved\nRejected\nAdmitted",
+   "read_only": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Status"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.status == \"Accepted\";",
+   "fieldname": "remedial_material",
+   "fieldtype": "Check",
+   "label": "Remedial Material"
+  },
+  {
+   "depends_on": "eval:doc.remedial_material == 1;",
+   "fieldname": "remedial_materials_tab",
+   "fieldtype": "Tab Break",
+   "label": "Remedial Materials"
+>>>>>>> origin/develop
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
+<<<<<<< HEAD
  "modified": "2024-08-04 15:51:19.449557",
+=======
+ "modified": "2024-07-29 23:11:37.110406",
+>>>>>>> origin/develop
  "modified_by": "Administrator",
  "module": "Admission",
  "name": "Student Applicant",

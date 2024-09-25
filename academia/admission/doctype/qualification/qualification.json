@@ -24,7 +24,10 @@
   {
    "fieldname": "name_series",
    "fieldtype": "Select",
+<<<<<<< HEAD
    "hidden": 1,
+=======
+>>>>>>> origin/develop
    "label": "Name Series ",
    "options": "ADM-SAP-.YYYY.-"
   },
@@ -32,8 +35,12 @@
    "fieldname": "qualification",
    "fieldtype": "Data",
    "in_list_view": 1,
+<<<<<<< HEAD
    "label": "Qualification",
    "reqd": 1
+=======
+   "label": "Qualification"
+>>>>>>> origin/develop
   },
   {
    "fieldname": "university",
@@ -45,8 +52,12 @@
    "fieldname": "college",
    "fieldtype": "Data",
    "in_list_view": 1,
+<<<<<<< HEAD
    "label": "College",
    "reqd": 1
+=======
+   "label": "College"
+>>>>>>> origin/develop
   },
   {
    "fieldname": "department",
@@ -105,7 +116,11 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
+<<<<<<< HEAD
  "modified": "2024-08-02 16:56:55.166778",
+=======
+ "modified": "2024-07-16 04:15:41.145800",
+>>>>>>> origin/develop
  "modified_by": "Administrator",
  "module": "Admission",
  "name": "Qualification",
