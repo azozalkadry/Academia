@@ -5,7 +5,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "academic_program",
+  "transaction_applicants",
   "students",
   "committee_member_tab",
   "committee_members_section",
@@ -20,19 +20,10 @@
  ],
  "fields": [
   {
-   "fieldname": "academic_program",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Academic Program",
-   "options": "Program Specification",
-   "reqd": 1
-  },
-  {
    "fieldname": "students",
    "fieldtype": "Table",
    "label": "Students",
-   "options": "Student Applicant Child",
-   "read_only": 1
+   "options": "Student Applicant Child"
   },
   {
    "fieldname": "table_ayrk",
@@ -81,11 +72,19 @@
    "fieldname": "committee_members_section",
    "fieldtype": "Section Break",
    "label": "Committee Members"
+  },
+  {
+   "fieldname": "transaction_applicants",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Transaction Applicants",
+   "options": "Transaction Applicants",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-02 02:46:46.974072",
+ "modified": "2024-08-02 17:20:47.584635",
  "modified_by": "Administrator",
  "module": "Admission",
  "name": "Applicant Meeting",

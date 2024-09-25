@@ -18,5 +18,6 @@ class Guardian(Document):
 		naming_series: DF.Literal["naming_series"]
 		occupation: DF.Data | None
 		phone_number: DF.Phone
+		relation: DF.Data | None
 	# end: auto-generated types
 	pass

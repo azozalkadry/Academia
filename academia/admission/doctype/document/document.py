@@ -14,11 +14,11 @@ class Document(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
-		country: DF.Data
-		file: DF.Attach
-		issuance_date: DF.Date
-		issuer: DF.Data
-		name1: DF.Data
+		country: DF.Data | None
+		file: DF.Attach | None
+		issuance_date: DF.Date | None
+		issuer: DF.Data | None
+		name1: DF.Data | None
 		name_series: DF.Literal
 		parent: DF.Data
 		parentfield: DF.Data

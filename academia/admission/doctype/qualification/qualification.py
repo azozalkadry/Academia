@@ -15,19 +15,19 @@ class Qualification(Document):
 		from frappe.types import DF
 
 		college: DF.Data
-		country: DF.Data
-		department: DF.Data
-		estimation: DF.Data
-		graduation_year: DF.Data
-		name1: DF.Data
+		country: DF.Data | None
+		department: DF.Data | None
+		estimation: DF.Data | None
+		graduation_year: DF.Data | None
+		name1: DF.Data | None
 		name_series: DF.Literal["ADM-SAP-.YYYY.-"]
 		parent: DF.Data
 		parentfield: DF.Data
 		parenttype: DF.Data
-		percentage: DF.Data
+		percentage: DF.Data | None
 		qualification: DF.Data
-		role: DF.Data
-		specialty: DF.Data
-		university: DF.Data
+		role: DF.Data | None
+		specialty: DF.Data | None
+		university: DF.Data | None
 	# end: auto-generated types
 	pass
