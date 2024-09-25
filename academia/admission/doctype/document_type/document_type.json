@@ -1,26 +1,16 @@
 {
  "actions": [],
  "allow_rename": 1,
-<<<<<<< HEAD
  "autoname": "field:name1",
-=======
- "autoname": "field:title",
->>>>>>> origin/develop
  "creation": "2024-07-16 04:16:19.753990",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-<<<<<<< HEAD
-=======
-  "title",
->>>>>>> origin/develop
   "name1"
  ],
  "fields": [
   {
-<<<<<<< HEAD
    "allow_in_quick_entry": 1,
-=======
    "fieldname": "title",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -28,25 +18,17 @@
    "unique": 1
   },
   {
->>>>>>> origin/develop
    "fieldname": "name1",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Name",
-<<<<<<< HEAD
    "reqd": 1,
-=======
->>>>>>> origin/develop
    "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
-<<<<<<< HEAD
- "modified": "2024-08-02 01:15:54.300810",
-=======
  "modified": "2024-07-16 04:16:19.753990",
->>>>>>> origin/develop
  "modified_by": "Administrator",
  "module": "Admission",
  "name": "Document Type",
@@ -66,10 +48,7 @@
    "write": 1
   }
  ],
-<<<<<<< HEAD
  "quick_entry": 1,
-=======
->>>>>>> origin/develop
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

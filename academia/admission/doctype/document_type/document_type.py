@@ -14,11 +14,6 @@ class DocumentType(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
-<<<<<<< HEAD
 		name1: DF.Data
-=======
-		name1: DF.Data | None
-		title: DF.Data | None
->>>>>>> origin/develop
 	# end: auto-generated types
 	pass
